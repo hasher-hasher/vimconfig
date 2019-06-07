@@ -16,6 +16,21 @@ Plugin 'scrooloose/nerdtree'
 "NerdTree Git
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
+" ColorScheme Monokai
+Plugin 'crusoexia/vim-monokai'
+
+" NerdTree Highlight
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Jedi AutoCompletion
+Plugin 'davidhalter/jedi-vim'
+
+" YouCompleteMe
+Plugin 'Valloric/YouCompleteMe'
+
+" vim-flake8
+Plugin 'nvie/vim-flake8'
+
 " Devicons -> This must be the very last one to be loaded <-
 Plugin 'ryanoasis/vim-devicons'
 
@@ -51,3 +66,27 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " Set UTF-8
 set encoding=UTF-8
+
+" Fixing ^G character
+let g:NERDTreeNodeDelimiter = "\u00a0"
+
+" Enabling Theme
+syntax on
+
+" Enabling Themes
+" colo wizard
+colo monokai
+
+" Enabling truecolor
+set termguicolors
+
+" Jedi Config
+let g:jedi#use_splits_not_buffers = "winwidth"
+let g:jedi#popup_select_first = 0
+
+" Set line numbers
+set number
+
+" Fixing backspace stuff
+set backspace=indent,eol,start
+
