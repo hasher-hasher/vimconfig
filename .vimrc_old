@@ -90,3 +90,11 @@ set number
 " Fixing backspace stuff
 set backspace=indent,eol,start
 
+" Appending ()
+inoremap ( ()<Left>
+
+" Appending {}
+inoremap { {}<Left>
+
+" Shown hidden folders
+let NERDTreeShowHidden=1
